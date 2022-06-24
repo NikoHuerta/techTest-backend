@@ -6,7 +6,11 @@ export const validateFields = (req:Request, res:Response, next: NextFunction) =>
 
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-        return res.status(400).json({ errors });
+
+        return res.status(400).json({
+            ok: false,
+            message: errors.array().map(error => error.msg).join(', ')
+        });
     }
     next();
 }

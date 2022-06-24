@@ -52,7 +52,7 @@ const TaskSchema = new mongoose_1.Schema({
 });
 TaskSchema.methods.toJSON = function () {
     const _a = this.toObject(), { __v, _id } = _a, data = __rest(_a, ["__v", "_id"]);
-    data.taskId = _id;
+    data.objectId = _id;
     return data;
 };
 TaskSchema.plugin(config_1.AutoIncrement, { inc_field: 'taskId' });

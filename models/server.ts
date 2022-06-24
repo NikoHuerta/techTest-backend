@@ -1,8 +1,10 @@
 import express, { Application } from "express";
 import cors from 'cors';
+import swaggerUI from 'swagger-ui-express';
 
 import { taskRoutes } from '../routes';
 import { dbConnection } from '../db/config';
+import { validateJSON } from '../middlewares';
 
 class Server {
 
@@ -30,8 +32,14 @@ class Server {
         this.app.use( cors() );
         //JSON BODY
         this.app.use(express.json());
+        //VALIDATE JSON
+        this.app.use(validateJSON);
         //PUBLIC FOLDER
         this.app.use(express.static('public'));
+        //SWAGGER DOCUMENTATION
+        this.app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(require('../docs')));
+
+        
     }
 
     routes(){

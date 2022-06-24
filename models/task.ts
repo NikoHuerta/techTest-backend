@@ -1,4 +1,4 @@
-import mongoose, { Schema, model, Model } from 'mongoose';
+import mongoose, { Schema, Model } from 'mongoose';
 import { AutoIncrement } from '../db/config';
 import { ITask } from '../interfaces/task';
 
@@ -21,7 +21,7 @@ const TaskSchema = new Schema({
 
 TaskSchema.methods.toJSON = function () {
     const { __v, _id, ...data } = this.toObject();
-    data.taskId = _id;
+    data.objectId = _id;
 
     return data;
 }
