@@ -16,4 +16,3 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./bd-validator"), exports);
 __exportStar(require("./date-validator"), exports);
-//# sourceMappingURL=index.js.map

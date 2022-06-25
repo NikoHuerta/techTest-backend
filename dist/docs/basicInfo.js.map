@@ -1,1 +1,0 @@
-{"version":3,"file":"basicInfo.js","sourceRoot":"","sources":["../../docs/basicInfo.ts"],"names":[],"mappings":";AAAA,MAAM,CAAC,OAAO,GAAG;IACb,OAAO,EAAE,OAAO;IAChB,IAAI,EAAE;QACF,KAAK,EAAE,WAAW;QAClB,WAAW,EAAE,uBAAuB;QACpC,OAAO,EAAE,OAAO;QAChB,OAAO,EAAE;YACL,IAAI,EAAE,gBAAgB;YACtB,KAAK,EAAE,sBAAsB;YAC7B,GAAG,EAAE,+BAA+B;SACvC;KACJ;CACJ,CAAA"}

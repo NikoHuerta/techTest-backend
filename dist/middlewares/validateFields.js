@@ -13,4 +13,3 @@ const validateFields = (req, res, next) => {
     next();
 };
 exports.validateFields = validateFields;
-//# sourceMappingURL=validateFields.js.map

@@ -15,4 +15,3 @@ const validateJSON = (err, req, res, next) => {
     }
 };
 exports.validateJSON = validateJSON;
-//# sourceMappingURL=validateJSON.js.map

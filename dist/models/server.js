@@ -50,10 +50,9 @@ class Server {
         this.app.use(this.apiPaths.task, routes_1.taskRoutes);
     }
     listen() {
-        this.app.listen(this.port, () => {
+        return this.app.listen(this.port, () => {
             console.log(`Server running on port ${this.port}`);
         });
     }
 }
 exports.default = Server;
-//# sourceMappingURL=server.js.map

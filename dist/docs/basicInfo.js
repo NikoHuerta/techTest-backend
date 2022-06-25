@@ -12,4 +12,3 @@ module.exports = {
         }
     }
 };
-//# sourceMappingURL=basicInfo.js.map

@@ -6,4 +6,3 @@ module.exports = {
         }
     ]
 };
-//# sourceMappingURL=tags.js.map

@@ -18,4 +18,3 @@ const isDate = (value) => {
     }
 };
 exports.isDate = isDate;
-//# sourceMappingURL=date-validator.js.map

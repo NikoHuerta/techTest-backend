@@ -40,4 +40,3 @@ router.delete('/:id', [
     middlewares_1.validateFields
 ], controllers_1.deleteTask);
 exports.default = router;
-//# sourceMappingURL=task.js.map

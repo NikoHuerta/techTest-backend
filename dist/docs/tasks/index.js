@@ -10,4 +10,3 @@ module.exports = {
         '/task/{id}': Object.assign(Object.assign(Object.assign({}, getTask), updateTask), deleteTask)
     }
 };
-//# sourceMappingURL=index.js.map

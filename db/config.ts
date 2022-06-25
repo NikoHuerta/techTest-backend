@@ -8,8 +8,23 @@ export const dbConnection = async () => {
 
     try {
 
-        await mongoose.connect(process.env.DB_URL || '');
-        console.log('DB Online');
+        console.log('Enviroment: ',process.env.NODE_ENV);
+        switch(process.env.NODE_ENV){
+            case 'dev':
+                await mongoose.connect(process.env.DB_URL_DEV || '');
+                break;
+            
+            case 'testing':
+                await mongoose.connect(process.env.DB_URL_TEST || '');
+                break;
+            
+            case 'prod':
+                await mongoose.connect(process.env.DB_URL_PROD || '');
+                break;
+        }
+        
+        if(process.env.NODE_ENV !== 'testing')
+            console.log('DB Online');
 
     } catch (err) {
 

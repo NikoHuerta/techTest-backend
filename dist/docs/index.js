@@ -5,4 +5,3 @@ const tags = require('./tags');
 const components = require('./components');
 const tasks = require('./tasks');
 module.exports = Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({}, basicInfo), servers), tags), components), tasks);
-//# sourceMappingURL=index.js.map

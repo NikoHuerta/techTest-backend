@@ -8,4 +8,3 @@ var server_1 = require("./server");
 Object.defineProperty(exports, "Server", { enumerable: true, get: function () { return __importDefault(server_1).default; } });
 var task_1 = require("./task");
 Object.defineProperty(exports, "Task", { enumerable: true, get: function () { return __importDefault(task_1).default; } });
-//# sourceMappingURL=index.js.map

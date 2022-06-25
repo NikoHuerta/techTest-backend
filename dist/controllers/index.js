@@ -16,4 +16,3 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 //barrel file for controllers
 __exportStar(require("./task"), exports);
-//# sourceMappingURL=index.js.map

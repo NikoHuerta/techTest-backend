@@ -19,8 +19,20 @@ exports.AutoIncrement = require('mongoose-sequence')(mongoose_1.default);
 dotenv_1.default.config();
 const dbConnection = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        yield mongoose_1.default.connect(process.env.DB_URL || '');
-        console.log('DB Online');
+        console.log('Enviroment: ', process.env.NODE_ENV);
+        switch (process.env.NODE_ENV) {
+            case 'dev':
+                yield mongoose_1.default.connect(process.env.DB_URL_DEV || '');
+                break;
+            case 'testing':
+                yield mongoose_1.default.connect(process.env.DB_URL_TEST || '');
+                break;
+            case 'prod':
+                yield mongoose_1.default.connect(process.env.DB_URL_PROD || '');
+                break;
+        }
+        if (process.env.NODE_ENV !== 'testing')
+            console.log('DB Online');
     }
     catch (err) {
         console.log(err);
@@ -28,4 +40,3 @@ const dbConnection = () => __awaiter(void 0, void 0, void 0, function* () {
     }
 });
 exports.dbConnection = dbConnection;
-//# sourceMappingURL=config.js.map
