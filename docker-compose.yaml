@@ -1,0 +1,8 @@
+services:
+  teslodb:
+    image: mongo:5.0.0
+    container_name: techTestDB # name for the container
+    ports:
+      - 27017:27017 # internal port exposed on the host machine || to the container port 27017 (default port for mongo)
+    volumes:
+      - ./mongo:/data/db # volume mount for the data volume 
