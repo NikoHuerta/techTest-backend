@@ -28,6 +28,5 @@ TaskSchema.methods.toJSON = function () {
 
 TaskSchema.plugin(AutoIncrement, { inc_field: 'taskId' });
 
-
 const Task:Model<ITask> = mongoose.models.Task || mongoose.model('Task', TaskSchema);
 export default Task;

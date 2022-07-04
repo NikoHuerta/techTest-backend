@@ -7,7 +7,6 @@ dotenv.config();
 export const dbConnection = async () => {
 
     try {
-
         console.log('Enviroment: ',process.env.NODE_ENV);
         switch(process.env.NODE_ENV){
             case 'dev':
@@ -22,15 +21,11 @@ export const dbConnection = async () => {
                 await mongoose.connect(process.env.DB_URL_PROD || '');
                 break;
         }
+        if(process.env.NODE_ENV !== 'testing') console.log('DB Online');
         
-        if(process.env.NODE_ENV !== 'testing')
-            console.log('DB Online');
-
     } catch (err) {
-
         console.log(err);
         throw new Error('Error connecting to DB');
-
     }
 }
 
